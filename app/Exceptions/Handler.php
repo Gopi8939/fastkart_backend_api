@@ -47,7 +47,6 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->renderable(function (Exception $exception, $request) {
-        //    dd($exception);
             if ($exception instanceof NotFoundHttpException) {
 
                 if ($request->hasHeader("Accept-Language")) {

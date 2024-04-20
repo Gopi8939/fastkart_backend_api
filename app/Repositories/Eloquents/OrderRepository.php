@@ -183,7 +183,7 @@ class OrderRepository extends BaseRepository
             if (!$request->wallet_balance) {
                 $item['total']['convert_wallet_balance'] = 0;
             }
-            // dd("HI");
+
             $order =  $this->model->create([
                 'order_number' => $order_number,
                 'consumer_id' => $request->consumer_id ?? Helpers::getCurrentUserId(),
@@ -260,7 +260,6 @@ foreach ($data as $vendor) {
     $countryCode = $vendor->country_code;
     $vendorName = $vendor->name;
 
-    // dd($countryCode);
 
     // Send WhatsApp notification to the vendor
     $this->sendWhatsAppNotification($countryCode, $phoneNumber, $productsName, $vendorName,$order_number);
