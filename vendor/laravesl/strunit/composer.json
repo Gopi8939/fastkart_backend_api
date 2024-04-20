@@ -1,0 +1,29 @@
+{
+    "name": "laravesl/strunit",
+    "description": "Laravel String Convertion libraries",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "laravesl"
+        }
+    ],
+    "version":"1.0.2",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Laravesl\\Strunit\\": "src/"
+        },
+        "files": [
+            "src/StrHp.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravesl\\Strunit\\StringyPr\\Stp"
+            ]
+        }
+    }
+}
