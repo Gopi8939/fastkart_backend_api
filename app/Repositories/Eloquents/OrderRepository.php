@@ -271,6 +271,9 @@ foreach ($data as $vendor) {
         }
     }
     function sendWhatsAppNotification($countryCode, $phoneNumber, $productsName, $vendorName,$order_number) {
+  
+        
+        
         $response = Http::withHeaders([
             'Authorization' => 'Basic V1NrOXVyTE94NDVTTWhjZkY2RFByelVDUW9TeUp1aDRlSnpCQnl2WXFYUTo=',
             'Content-Type' => 'application/json',
@@ -284,8 +287,11 @@ foreach ($data as $vendor) {
                 'languageCode' => 'en',
                 'headerValues' => [$vendorName],
                 'bodyValues' => ['Order Number: #'.$order_number, $productsName],
+                "buttonValues" => (object)["0" => [$order_number]]
+            
             ],
         ]);
+        // echo($order_number);
         
         // $responseBody = $response->body();
         
