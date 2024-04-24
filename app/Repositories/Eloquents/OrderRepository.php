@@ -291,6 +291,7 @@ foreach ($data as $vendor) {
             
             ],
         ]);
+        
         // echo($order_number);
         
         // $responseBody = $response->body();
